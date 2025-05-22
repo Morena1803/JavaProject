@@ -1,7 +1,9 @@
 Pershkrim i Projektit (Sistem Menaxhimi Kursesh Online):
+
 Ky projekt perfaqeson zhvillimin e nje sistemi online per menaxhimin e kurseve dhe studenteve. Qellimi i projektit eshte te ofroje nje platforme ku studentet mund te regjistrohen ne kurse dhe instruktoret te menaxhojne materialett e tyre
 
 Funksionalitetet e zbatuara deri tani:
+
 Deri tani kemi krijuar dy entitetet e para, Kursi dhe Instructor dhe i kemi strukturuar ato ne layers(Controller, Service, Repository, Entity) qe synojne te ofrojne nje zgjidhje te thjeshte per ruajtjen dhe modifikimin e te dhenave per kurset dhe instruktoret që i ofrojnë ato
 Entiteti Kursi: perfaqeson nje kurs të ofruar ne sistem
 Entiteti Instructor: perfaqeson nje individ qe mund te ofroje nje ose me shume kurse
