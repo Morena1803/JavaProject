@@ -38,6 +38,8 @@ Kemi ndertuar API endpoints per te:
 
 
 
+
+
 Sapo shtova entitetin tjeter "Studenti" qe mban te dhenat e studenteve qe ndjekin nje kurs te caktuar dhe instruktorin e caktuar per ate kurs.
 
 Printimi i te dhenave te tabeles Studenti me metoden GET:
