@@ -35,3 +35,22 @@ Kemi ndertuar API endpoints per te:
 
 
 ![Screenshot (1196)](https://github.com/user-attachments/assets/d9d84cf3-32f7-4e97-a99f-da97a89c0776)
+
+
+
+Sapo shtova entitetin tjeter "Studenti" qe mban te dhenat e studenteve qe ndjekin nje kurs te caktuar dhe instruktorin e caktuar per ate kurs.
+
+Printimi i te dhenave te tabeles Studenti me metoden GET:
+
+![image](https://github.com/user-attachments/assets/5551920f-c4c4-47d1-8b9c-22249845d58d)
+
+
+![image](https://github.com/user-attachments/assets/508491be-b49e-43fa-8994-af215fdfdf4f)
+
+
+![image](https://github.com/user-attachments/assets/9b4e11db-45d2-4961-8cea-d6944b89b74c)
+
+
+Modifikimi i te dhenave te nje studenti me metoden PUT, permes id:
+
+![image](https://github.com/user-attachments/assets/3ba0ffdc-dfc0-4247-8bfb-6448f75433eb)
