@@ -29,7 +29,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Studenti ruajStudent(Studenti student) {
-        // Thjesht ruaj studentin, pasi kursi lidhet përmes regjistrimit
+
         return studentRepository.save(student);
     }
 

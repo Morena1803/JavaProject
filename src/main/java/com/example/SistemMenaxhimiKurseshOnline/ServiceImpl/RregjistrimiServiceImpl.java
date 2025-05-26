@@ -30,17 +30,14 @@ public class RregjistrimiServiceImpl implements RregjistrimiService {
 
     @Override
     public Rregjistrimi krijoRregjistrim(Rregjistrimi rregjistrimi) {
-        // Marrim studentin real nga databaza
         Long studentId = rregjistrimi.getStudent().getId();
         Studenti studenti = studentRepository.findById(studentId)
                 .orElseThrow(() -> new RuntimeException("Studenti me ID " + studentId + " nuk u gjet"));
 
-        // Marrim kursin real nga databaza
         Long kursId = rregjistrimi.getKursi().getId();
         Kursi kursi = kursiRepository.findById(kursId)
                 .orElseThrow(() -> new RuntimeException("Kursi me ID " + kursId + " nuk u gjet"));
 
-        // Vendosim entitetet e plota
         rregjistrimi.setStudent(studenti);
         rregjistrimi.setKursi(kursi);
 

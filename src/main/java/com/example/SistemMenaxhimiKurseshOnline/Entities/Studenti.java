@@ -17,23 +17,19 @@ public class Studenti {
     private String mbiemri;
     private String emaili;
 
-    // Lidhja me regjistrimet e kurseve
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore // Për të shmangur ciklet JSON në përgjigje
+    @JsonIgnore // Per te shmangur ciklet JSON
     private Set<Rregjistrimi> rregjistrimet = new HashSet<>();
 
-    // Konstruktori bosh
     public Studenti() {
     }
 
-    // Konstruktori pa regjistrimet (kur krijon një student të ri)
     public Studenti(String emri, String mbiemri, String emaili) {
         this.emri = emri;
         this.mbiemri = mbiemri;
         this.emaili = emaili;
     }
 
-    // Getter/Setter
     public Long getId() {
         return id;
     }
