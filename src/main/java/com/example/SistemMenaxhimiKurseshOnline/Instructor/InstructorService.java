@@ -1,31 +1,15 @@
 package com.example.SistemMenaxhimiKurseshOnline.Instructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class InstructorService {
+public interface InstructorService {
 
-    private final InstructorRepository instructorRepository;
+    List<Instructor> printoInstructorët();
 
-    public InstructorService(InstructorRepository instructorRepository) {
-        this.instructorRepository = instructorRepository;
-    }
+    Optional<Instructor> gjejInstructorMeId(Long id);
 
-    public List<Instructor> printoInstructorët() {
-        return instructorRepository.findAll();
-    }
+    Instructor ruajInstructor(Instructor instructor);
 
-    public Optional<Instructor> gjejInstructorMeId(Long id) {
-        return instructorRepository.findById(id);
-    }
-
-    public Instructor ruajInstructor(Instructor instructor) {
-        return instructorRepository.save(instructor);
-    }
-
-    public void fshiInstruktor(Long id) {
-        instructorRepository.deleteById(id);
-    }
+    void fshiInstruktor(Long id);
 }

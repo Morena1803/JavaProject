@@ -1,31 +1,15 @@
 package com.example.SistemMenaxhimiKurseshOnline.Kursi;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class KursiService {
+public interface KursiService {
 
-    private final KursiRepository kursiRepository;
+    List<Kursi> gjejTeGjithaKursat();
 
-    public KursiService(KursiRepository kursiRepository) {
-        this.kursiRepository = kursiRepository;
-    }
+    Optional<Kursi> gjejKursMeId(Long id);
 
-    public List<Kursi> gjejTeGjithaKursat() {
-        return kursiRepository.findAll();
-    }
+    Kursi ruajKurs(Kursi kursi);
 
-    public Optional<Kursi> gjejKursMeId(Long id) {
-        return kursiRepository.findById(id);
-    }
-
-    public Kursi ruajKurs(Kursi kursi) {
-        return kursiRepository.save(kursi);
-    }
-
-    public void fshiKurs(Long id) {
-        kursiRepository.deleteById(id);
-    }
+    void fshiKurs(Long id);
 }
