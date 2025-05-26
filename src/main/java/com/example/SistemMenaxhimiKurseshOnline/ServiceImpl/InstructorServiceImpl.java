@@ -18,22 +18,29 @@ public class InstructorServiceImpl implements InstructorService {
     }
 
     @Override
-    public List<Instructor> printoInstructorët() {
+    public List<Instructor> printoInstructoret() {
+
         return instructorRepository.findAll();
     }
 
     @Override
     public Optional<Instructor> gjejInstructorMeId(Long id) {
+
         return instructorRepository.findById(id);
     }
 
     @Override
     public Instructor ruajInstructor(Instructor instructor) {
+
         return instructorRepository.save(instructor);
     }
 
     @Override
     public void fshiInstruktor(Long id) {
         instructorRepository.deleteById(id);
+    }
+    @Override
+    public Instructor gjejInstructorSipasEmail(String email) {
+        return instructorRepository.findByEmaili(email);
     }
 }

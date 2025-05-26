@@ -29,26 +29,32 @@ public class Kursi {
     }
 
     public String getLlojiKursit() {
+
         return llojiKursit;
     }
 
     public void setLlojiKursit(String llojiKursit) {
+
         this.llojiKursit = llojiKursit;
     }
 
     public String getPershkrimi() {
+
         return pershkrimi;
     }
 
     public void setPershkrimi(String pershkrimi) {
+
         this.pershkrimi = pershkrimi;
     }
 
     public Instructor getInstructor() {
+
         return instructor;
     }
 
     public void setInstructor(Instructor instructor) {
+
         this.instructor = instructor;
     }
 

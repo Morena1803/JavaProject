@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class RregjistrimiServiceImpl implements RregjistrimiService {
@@ -32,11 +33,11 @@ public class RregjistrimiServiceImpl implements RregjistrimiService {
     public Rregjistrimi krijoRregjistrim(Rregjistrimi rregjistrimi) {
         Long studentId = rregjistrimi.getStudent().getId();
         Studenti studenti = studentRepository.findById(studentId)
-                .orElseThrow(() -> new RuntimeException("Studenti me ID " + studentId + " nuk u gjet"));
+                .orElseThrow(() -> new RuntimeException("Studenti me ID " + studentId + " nuk ekziston"));
 
         Long kursId = rregjistrimi.getKursi().getId();
         Kursi kursi = kursiRepository.findById(kursId)
-                .orElseThrow(() -> new RuntimeException("Kursi me ID " + kursId + " nuk u gjet"));
+                .orElseThrow(() -> new RuntimeException("Kursi me ID " + kursId + " nuk ekziston"));
 
         rregjistrimi.setStudent(studenti);
         rregjistrimi.setKursi(kursi);
@@ -46,16 +47,32 @@ public class RregjistrimiServiceImpl implements RregjistrimiService {
 
     @Override
     public List<Rregjistrimi> gjejTeGjitha() {
+
         return rregjistrimiRepository.findAll();
     }
 
     @Override
     public Optional<Rregjistrimi> gjejMeId(Long id) {
+
         return rregjistrimiRepository.findById(id);
     }
 
     @Override
     public void fshiRregjistrim(Long id) {
+
         rregjistrimiRepository.deleteById(id);
     }
+
+    @Override
+    public boolean ekzistonRregjistrimi(Long id, Long kursId) {
+        return false;
+    }
+    @Override
+    public List<Kursi> gjejKursetPerStudent(Long studentId) {
+        return rregjistrimiRepository.findAllByStudentId(studentId)
+                .stream()
+                .map(Rregjistrimi::getKursi)
+                .collect(Collectors.toList());
+    }
+
 }

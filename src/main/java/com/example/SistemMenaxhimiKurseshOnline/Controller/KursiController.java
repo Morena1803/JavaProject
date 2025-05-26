@@ -3,7 +3,6 @@ import com.example.SistemMenaxhimiKurseshOnline.Entities.Kursi;
 import com.example.SistemMenaxhimiKurseshOnline.Service.KursiService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -13,12 +12,14 @@ public class KursiController {
     private final KursiService kursiService;
 
     public KursiController(KursiService kursiService) {
+
         this.kursiService = kursiService;
     }
 
     @GetMapping
-    public List<Kursi> gjitheKursat() {
-        return kursiService.gjejTeGjithaKursat();
+    public List<Kursi> gjitheKurset() {
+
+        return kursiService.gjejTeGjithaKurset();
     }
 
     @GetMapping("/{id}")
@@ -30,6 +31,7 @@ public class KursiController {
 
     @PostMapping
     public Kursi krijoKurs(@RequestBody Kursi kursi) {
+
         return kursiService.ruajKurs(kursi);
     }
 

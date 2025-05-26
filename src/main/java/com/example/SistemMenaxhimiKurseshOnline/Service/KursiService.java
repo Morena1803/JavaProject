@@ -7,11 +7,14 @@ import java.util.Optional;
 
 public interface KursiService {
 
-    List<Kursi> gjejTeGjithaKursat();
+    List<Kursi> gjejTeGjithaKurset();
+
+    List<Kursi> gjejKursetESecilitInstruktor(String emailInstruktori);
 
     Optional<Kursi> gjejKursMeId(Long id);
 
     Kursi ruajKurs(Kursi kursi);
 
     void fshiKurs(Long id);
+
 }

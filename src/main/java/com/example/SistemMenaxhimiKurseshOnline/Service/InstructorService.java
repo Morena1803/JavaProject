@@ -7,11 +7,16 @@ import java.util.Optional;
 
 public interface InstructorService {
 
-    List<Instructor> printoInstructorët();
+    List<Instructor> printoInstructoret();
 
     Optional<Instructor> gjejInstructorMeId(Long id);
 
     Instructor ruajInstructor(Instructor instructor);
 
     void fshiInstruktor(Long id);
+
+    Instructor gjejInstructorSipasEmail(String email);
+
+
+
 }

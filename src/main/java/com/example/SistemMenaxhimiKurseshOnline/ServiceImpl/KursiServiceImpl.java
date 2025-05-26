@@ -14,26 +14,37 @@ public class KursiServiceImpl implements KursiService {
     private final KursiRepository kursiRepository;
 
     public KursiServiceImpl(KursiRepository kursiRepository) {
+
         this.kursiRepository = kursiRepository;
     }
 
     @Override
-    public List<Kursi> gjejTeGjithaKursat() {
+    public List<Kursi> gjejTeGjithaKurset() {
+
         return kursiRepository.findAll();
     }
 
     @Override
     public Optional<Kursi> gjejKursMeId(Long id) {
+
         return kursiRepository.findById(id);
     }
 
     @Override
     public Kursi ruajKurs(Kursi kursi) {
+
         return kursiRepository.save(kursi);
     }
 
     @Override
     public void fshiKurs(Long id) {
+
         kursiRepository.deleteById(id);
+    }
+
+    //merr kurset që i perkasin nje instruktori sipas emailit
+    @Override
+    public List<Kursi> gjejKursetESecilitInstruktor(String emailInstruktori) {
+        return kursiRepository.findAllByInstructor_Emaili(emailInstruktori);
     }
 }

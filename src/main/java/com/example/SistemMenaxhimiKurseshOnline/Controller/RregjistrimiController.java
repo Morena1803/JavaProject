@@ -3,7 +3,6 @@ import com.example.SistemMenaxhimiKurseshOnline.Entities.Rregjistrimi;
 import com.example.SistemMenaxhimiKurseshOnline.Service.RregjistrimiService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -18,6 +17,7 @@ public class RregjistrimiController {
 
     @GetMapping
     public List<Rregjistrimi> gjejTeGjitha() {
+
         return rregjistrimiService.gjejTeGjitha();
     }
 

@@ -1,59 +1,32 @@
 package com.example.SistemMenaxhimiKurseshOnline.Entities;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
+import java.util.List;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Instructor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String emri;
+
+    @NotBlank
     private String mbiemri;
+
+    @Email
+    @NotBlank
     private String emaili;
 
     @OneToMany(mappedBy = "instructor", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Kursi> kursi = new HashSet<>();
-
-    public Instructor() {
-    }
-
-    public Instructor(String name, String lastName, String email) {
-        this.emri = name;
-        this.mbiemri = lastName;
-        this.emaili = email;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getEmri() {
-        return emri;
-    }
-
-    public void setEmri(String emri) {
-        this.emri = emri;
-    }
-
-    public String getMbiemri() {
-        return mbiemri;
-    }
-
-    public void setMbiemri(String mbiemri) {
-        this.mbiemri = mbiemri;
-    }
-
-    public String getEmaili() {
-        return emaili;
-    }
-
-    public void setEmaili(String emaili) {
-        this.emaili = emaili;
-    }
-
+    @JsonIgnore
+    private List<Kursi> kurset;
 }
-

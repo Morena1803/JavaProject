@@ -1,7 +1,6 @@
 package com.example.SistemMenaxhimiKurseshOnline.Entities;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
 @Entity
@@ -13,8 +12,9 @@ public class Rregjistrimi {
 
     @ManyToOne
     @JoinColumn(name = "student_id", nullable = false)
-    @JsonIgnore
+    @JsonBackReference
     private Studenti student;
+
 
     @ManyToOne
     @JoinColumn(name = "kursi_id", nullable = false)
@@ -22,7 +22,7 @@ public class Rregjistrimi {
 
     private LocalDate dataRregjistrimit;
 
-    private String status; //Aktiv, anuluar ose perfunduar
+    private String status; //aktiv, anuluar ose perfunduar
 
     public Rregjistrimi() {
     }
@@ -39,10 +39,12 @@ public class Rregjistrimi {
     }
 
     public Studenti getStudent() {
+
         return student;
     }
 
     public void setStudent(Studenti student) {
+
         this.student = student;
     }
 
@@ -51,22 +53,27 @@ public class Rregjistrimi {
     }
 
     public void setKursi(Kursi kursi) {
+
         this.kursi = kursi;
     }
 
     public LocalDate getDataRregjistrimit() {
+
         return dataRregjistrimit;
     }
 
     public void setDataRregjistrimit(LocalDate dataRregjistrimit) {
+
         this.dataRregjistrimit = dataRregjistrimit;
     }
 
     public String getStatus() {
+
         return status;
     }
 
     public void setStatus(String status) {
+
         this.status = status;
     }
 }

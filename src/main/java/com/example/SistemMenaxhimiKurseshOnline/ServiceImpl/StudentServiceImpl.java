@@ -14,16 +14,25 @@ public class StudentServiceImpl implements StudentService {
     private final StudentRepository studentRepository;
 
     public StudentServiceImpl(StudentRepository studentRepository) {
+
         this.studentRepository = studentRepository;
     }
 
     @Override
     public List<Studenti> printoStudentet() {
+
         return studentRepository.findAll();
     }
 
     @Override
+    public Studenti gjejStudentSipasEmail(String email) {
+
+        return studentRepository.findByEmaili(email).orElse(null);
+    }
+
+    @Override
     public Optional<Studenti> gjejStudentMeId(Long id) {
+
         return studentRepository.findById(id);
     }
 
@@ -35,6 +44,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public void fshiStudent(Long id) {
+
         studentRepository.deleteById(id);
     }
 }
