@@ -40,19 +40,23 @@ Kemi ndertuar API endpoints per te:
 
 
 
-Sapo shtova entitetin tjeter "Studenti" qe mban te dhenat e studenteve qe ndjekin nje kurs te caktuar dhe instruktorin e caktuar per ate kurs.
+Kemi shtuar entitetin tjeter "Studenti" qe mban te dhenat e studenteve qe ndjekin nje kurs te caktuar dhe instruktorin e caktuar per ate kurs.
 
 Printimi i te dhenave te tabeles Studenti me metoden GET:
 
-![image](https://github.com/user-attachments/assets/5551920f-c4c4-47d1-8b9c-22249845d58d)
+![image](https://github.com/user-attachments/assets/56a363ab-9bf1-420a-9b59-926f6eef4c30)
 
 
-![image](https://github.com/user-attachments/assets/508491be-b49e-43fa-8994-af215fdfdf4f)
+![image](https://github.com/user-attachments/assets/964cccf5-36a7-4888-a9a1-fce3263e73c3)
 
 
-![image](https://github.com/user-attachments/assets/9b4e11db-45d2-4961-8cea-d6944b89b74c)
+
+Po ashtu kemi shtuar edhe entitetin Rregjistrimi, qe do te mbaje informacionin lidhes mes kurseve dhe studenteve, per rregjistrimin e ketyre te fundit
+
+Printimi i te dhenave te tabeles rregjistrimi:
 
 
-Modifikimi i te dhenave te nje studenti me metoden PUT, permes id:
+![image](https://github.com/user-attachments/assets/fc853f92-3867-4639-a09e-564d3e93e9f4)
 
-![image](https://github.com/user-attachments/assets/3ba0ffdc-dfc0-4247-8bfb-6448f75433eb)
+
+![image](https://github.com/user-attachments/assets/ab9f89ca-5f6d-4502-8bfb-0784e5d45ac8)
