@@ -1,9 +1,11 @@
-package com.example.SistemMenaxhimiKurseshOnline.Studenti;
-import com.example.SistemMenaxhimiKurseshOnline.Kursi.Kursi;
+package com.example.SistemMenaxhimiKurseshOnline.Entities;
+
 import jakarta.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-public class Studenti{
+public class Instructor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,18 +15,16 @@ public class Studenti{
     private String mbiemri;
     private String emaili;
 
-    @ManyToOne
-    @JoinColumn(name = "kursi_id")
-    private Kursi kursi;
+    @OneToMany(mappedBy = "instructor", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Kursi> kursi = new HashSet<>();
 
-    public Studenti() {
+    public Instructor() {
     }
 
-    public Studenti(String emri, String mbiemri, String emaili, Kursi kursi) {
-        this.emri = emri;
-        this.mbiemri = mbiemri;
-        this.emaili = emaili;
-        this.kursi = kursi;
+    public Instructor(String name, String lastName, String email) {
+        this.emri = name;
+        this.mbiemri = lastName;
+        this.emaili = email;
     }
 
     public Long getId() {
@@ -55,11 +55,5 @@ public class Studenti{
         this.emaili = emaili;
     }
 
-    public Kursi getKursi() {
-        return kursi;
-    }
-
-    public void setKursi(Kursi kursi) {
-        this.kursi = kursi;
-    }
 }
+

@@ -1,5 +1,4 @@
-package com.example.SistemMenaxhimiKurseshOnline.Kursi;
-import com.example.SistemMenaxhimiKurseshOnline.Instructor.Instructor;
+package com.example.SistemMenaxhimiKurseshOnline.Entities;
 import jakarta.persistence.*;
 
 @Entity

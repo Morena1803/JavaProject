@@ -1,4 +1,6 @@
-package com.example.SistemMenaxhimiKurseshOnline.Kursi;
+package com.example.SistemMenaxhimiKurseshOnline.Service;
+
+import com.example.SistemMenaxhimiKurseshOnline.Entities.Kursi;
 
 import java.util.List;
 import java.util.Optional;

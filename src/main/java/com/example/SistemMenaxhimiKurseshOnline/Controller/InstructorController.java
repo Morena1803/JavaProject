@@ -1,4 +1,6 @@
-package com.example.SistemMenaxhimiKurseshOnline.Instructor;
+package com.example.SistemMenaxhimiKurseshOnline.Controller;
+import com.example.SistemMenaxhimiKurseshOnline.Entities.Instructor;
+import com.example.SistemMenaxhimiKurseshOnline.Service.InstructorService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

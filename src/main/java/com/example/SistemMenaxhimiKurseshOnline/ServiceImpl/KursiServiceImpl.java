@@ -1,5 +1,8 @@
-package com.example.SistemMenaxhimiKurseshOnline.Kursi;
+package com.example.SistemMenaxhimiKurseshOnline.ServiceImpl;
 
+import com.example.SistemMenaxhimiKurseshOnline.Entities.Kursi;
+import com.example.SistemMenaxhimiKurseshOnline.Repository.KursiRepository;
+import com.example.SistemMenaxhimiKurseshOnline.Service.KursiService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
