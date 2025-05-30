@@ -56,19 +56,8 @@ Rregjistrimi
  
 Endpoint-e kryesore
 
-Endpoint                  	               Roli	           Pershkrimi
-POST /api/auth/register	                  publik	         Regjistrim përdoruesi
-POST /api/auth/login	                     publik	         Login dhe kthim i token-it JWT
-GET /api/student/kurset     	             STUDENT	        Shfaq te gjitha kurset
-POST /api/student/rregjistrohu	           STUDENT	        Regjistrim ne nje kurs
-GET /api/student/kurset-e-mia	            STUDENT	        Kurset ku eshte regjistruar studenti
-POST /api/instructor/shto-kurs 	          INSTRUCTOR	     Shton nje kurs të ri
-GET /api/instructor/kurset	               INSTRUCTOR	     Shfaq kurset e tij
-PUT /api/instructor/kurset/[id]	          INSTRUCTOR	     Perditeson kursin e vet
-GET /api/admin/kurset	                    ADMIN	          Shfaq te gjitha kurset
-DELETE /api/admin/student/[id]	           ADMIN	          Fshin nje student
-PUT  /api/admin/kursi/{id}	               ADMIN	          Editon nje kurs 
-DELETE /api/admin/instructor/[id]         ADMIN	          Fshin nje instruktor
+![image](https://github.com/user-attachments/assets/8b3c8a23-2ef1-4954-8a67-c9541b9feae1)
+
 
 
 
