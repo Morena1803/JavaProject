@@ -17,6 +17,7 @@ Sistemi perkrah login/register me JWT token dhe ka 3 role:
 -ADMIN: Mund te shohe, editoje dhe fshije çdo student, instruktor apo kurs
 
 
+
 Entitetet kryesore
 
 Kursi
@@ -50,6 +51,8 @@ Rregjistrimi
 
 -status: AKTIV, PERFUNDUAR, ANULUAR
 
+
+
  
 Endpoint-e kryesore
 
@@ -66,6 +69,8 @@ GET /api/admin/kurset	                    ADMIN	          Shfaq te gjitha kurset
 DELETE /api/admin/student/[id]	           ADMIN	          Fshin nje student
 PUT  /api/admin/kursi/{id}	               ADMIN	          Editon nje kurs 
 DELETE /api/admin/instructor/[id]         ADMIN	          Fshin nje instruktor
+
+
 
 
 --Rregjistrimi ne sistem si student:
