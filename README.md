@@ -1,35 +1,63 @@
 Pershkrim i Projektit (Sistem Menaxhimi Kursesh Online):
 
 Ky projekt eshte nje aplikacion REST API i ndertuar me Java dhe Spring Boot, qe simulon nje platforme per menaxhimin e kurseve online, duke mbuluar funksionalitetet kryesore per:
+
 -Administratorin
+
 -Instruktorin
+
 -Studentin
 
 
+
 Autentikimi dhe Roli i Përdoruesit:
+
 Sistemi perkrah login/register me JWT token dhe ka 3 role:
+
 -STUDENT: Mund te shohe kurset qe ofrohen dhe te regjistrohet
+
 -INSTRUCTOR: Mund te krijoje, modifikoje dhe shohe kurset e veta
+
 -ADMIN: Mund te shohe, editoje dhe fshije çdo student, instruktor apo kurs
 
+
+
 Entitetet kryesore:
+
 Kursi
+
 -llojiKursit: psh. Java, Angular, .Net etj
+
 -pershkrimi: pershkrim i shkurter rreth kursit
+
 -instructor: lidhje me instruktorin qe e drejton
 
+
+
 Studenti
+
 -emri, mbiemri, emaili
+
 -Mund te regjistrohet ne disa kurse
 
+
+
 Instructor
+
 -emri, mbiemri, emaili
+
 -Mund te kete disa kurse
 
+
+
 Rregjistrimi
+
 -lidhje many-to-many mes studenteve dhe kurseve
+
 -dataRregjistrimit
+
 -status: AKTIV, PERFUNDUAR, ANULUAR
+
 
  
 Endpointet kryesore:
