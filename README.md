@@ -55,8 +55,8 @@ Rregjistrimi
 
  
 Endpoint-e kryesore
+![Screenshot (1298)](https://github.com/user-attachments/assets/4686a472-ef98-446c-8f45-5e3f30f58634)
 
-![image](https://github.com/user-attachments/assets/8b3c8a23-2ef1-4954-8a67-c9541b9feae1)
 
 
 
