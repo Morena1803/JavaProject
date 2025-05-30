@@ -10,6 +10,8 @@ Ky projekt eshte nje aplikacion REST API i ndertuar me Java dhe Spring Boot, qe 
 
 
 
+
+
 Autentikimi dhe Roli i Përdoruesit:
 
 Sistemi perkrah login/register me JWT token dhe ka 3 role:
@@ -19,6 +21,8 @@ Sistemi perkrah login/register me JWT token dhe ka 3 role:
 -INSTRUCTOR: Mund te krijoje, modifikoje dhe shohe kurset e veta
 
 -ADMIN: Mund te shohe, editoje dhe fshije çdo student, instruktor apo kurs
+
+
 
 
 
@@ -59,10 +63,14 @@ Rregjistrimi
 -status: AKTIV, PERFUNDUAR, ANULUAR
 
 
+
+
  
 Endpointet kryesore:
 
 ![Screenshot (1298)](https://github.com/user-attachments/assets/4686a472-ef98-446c-8f45-5e3f30f58634)
+
+
 
 
 
